@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+
+# Virtual env
+.venv/
+venv/
+
+# DuckDB / generated artifacts
+exports/
+generated/
+raw/
+validated/
+
+# OS
+.DS_Store
+
+# Editor / agent state
+.claude/
