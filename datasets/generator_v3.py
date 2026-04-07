@@ -80,24 +80,32 @@ def generate_fraud_dataset(
 
         # base distribution
         amount = np.random.lognormal(mean=7, sigma=1.2)
+        is_fraud = False
 
         # FRAUD PATTERN 1 — large spike
         if random.random() < 0.01:
             amount *= 50
+            is_fraud = True
 
-        # FRAUD PATTERN 2 — velocity burst
+        # FRAUD PATTERN 2 — velocity burst (the burst itself is fraud)
+        # Pick a fraud merchant from a *subset* of categories so the model
+        # can't trivially learn merchant_category=='Unknown' ⇒ fraud.
         if random.random() < 0.02:
+            is_fraud = True
+            burst_merchant = random.choice(["Unknown", "Supplier", "Utilities"])
             for _ in range(5):
                 transactions.append({
                     "txn_id":            f"T{i:05}_burst",
                     "account_id":        acct["account_id"],
                     "amount":            round(float(amount), 2),
                     "txn_type":          "DEBIT",
-                    "merchant_category": "Unknown",
+                    "merchant_category": burst_merchant,
                     "timestamp":         base_time.isoformat(),
+                    "fraud_flag":        True,
                 })
 
-        # FRAUD PATTERN 3 — high-risk amplification
+        # FRAUD PATTERN 3 — high-risk amplification (NOT labelled as fraud:
+        # this is a behavioural amplifier, not an injected anomaly)
         if cust["risk_rating"] == "High":
             amount *= random.uniform(1.5, 3)
 
@@ -105,17 +113,23 @@ def generate_fraud_dataset(
         if random.random() < 0.5:
             amount *= -1
 
+        # Background merchant — uniform over all 5 categories so each
+        # category has both fraud and non-fraud examples.
+        merchant = random.choices(
+            ["Sales", "Payroll", "Utilities", "Supplier", "Unknown"],
+            weights=[0.2, 0.2, 0.2, 0.2, 0.2],
+        )[0]
+
         transactions.append({
             "txn_id":            f"T{i:05}",
             "account_id":        acct["account_id"],
             "amount":            round(float(amount), 2),
             "txn_type":          "CREDIT" if amount > 0 else "DEBIT",
-            "merchant_category": random.choice([
-                "Sales", "Payroll", "Utilities", "Supplier", "Unknown",
-            ]),
+            "merchant_category": merchant,
             "timestamp": (
                 base_time - timedelta(days=random.randint(0, 365))
             ).isoformat(),
+            "fraud_flag":        is_fraud,
         })
 
     return {

@@ -28,6 +28,7 @@ from datasets.validator import validate_basic, validate_distribution  # noqa: E4
 
 DEFAULT_QUERY     = "Generate SME banking dataset"
 FALLBACK_PATTERN  = "sme-banking-dataset-generator"
+DATASET_PREFIX    = "sme-banking-dataset-generator"  # only pick from these
 
 
 def run(query: str = DEFAULT_QUERY) -> int:
@@ -57,7 +58,12 @@ def run(query: str = DEFAULT_QUERY) -> int:
     # The Selector already ranked patterns by Jaccard relevance against the
     # query during execute(); re-run it here to get the ranked candidate list
     # for handler dispatch (the LLM's `patterns_used` is just a free-text hint).
-    active = engine.registry.filter_by_tier("exploration")
+    # Restrict to dataset generator patterns — fraud detectors live in the
+    # same registry but expect a DataFrame, not generator config.
+    active = [
+        p for p in engine.registry.filter_by_tier("exploration")
+        if p.id.startswith(DATASET_PREFIX)
+    ]
     selector_ranked = [p.id for p in engine.selector.select(query, active)]
     candidate_ids = [*llm_used, *selector_ranked, FALLBACK_PATTERN]
 
