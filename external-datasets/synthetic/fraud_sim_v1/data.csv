@@ -1,0 +1,4 @@
+transaction_id,account_id,amount,timestamp,scenario,severity
+sim_001,acct_s01,9999.00,2024-04-01T00:00:00,burst,high
+sim_002,acct_s01,9999.00,2024-04-01T00:00:01,burst,high
+sim_003,acct_s02,20.00,2024-04-01T00:10:00,safe,low

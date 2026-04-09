@@ -1,5 +1,9 @@
 from datasets.generator import generate_stub_data
-from datasets.validator import validate_basic, validate_distribution
+from datasets.validator import (
+    validate_basic,
+    validate_dataset_package,
+    validate_distribution,
+)
 
 
 def _good_data():
@@ -56,3 +60,53 @@ def test_distribution_flags_unrealistic_average():
     ]
     errors = validate_distribution(data)
     assert any("Unrealistic" in e for e in errors)
+
+
+def test_dataset_package_passes_for_seeded_gold_dataset():
+    assert validate_dataset_package("fraud_gold") == []
+
+
+def test_dataset_package_flags_missing_labels(tmp_path):
+    dataset_root = tmp_path / "external-datasets"
+    registry_dir = dataset_root / "registry"
+    dataset_dir = dataset_root / "fraud" / "broken_v1"
+    registry_dir.mkdir(parents=True)
+    dataset_dir.mkdir(parents=True)
+
+    (registry_dir / "datasets.json").write_text(
+        """
+        {
+          "broken_v1": {
+            "domain": "fraud",
+            "path": "../fraud/broken_v1",
+            "version": "1.0",
+            "tier": "bronze",
+            "has_labels": true
+          }
+        }
+        """.strip(),
+        encoding="utf-8",
+    )
+    (dataset_dir / "data.csv").write_text(
+        "transaction_id,amount,timestamp\nx1,10.0,2024-01-01T00:00:00\n",
+        encoding="utf-8",
+    )
+    (dataset_dir / "metadata.json").write_text(
+        """
+        {
+          "name": "broken_v1",
+          "domain": "fraud",
+          "description": "Broken dataset",
+          "label_column": "is_fraud",
+          "primary_keys": ["transaction_id"],
+          "time_column": "timestamp",
+          "evaluation_metric": "f1_score",
+          "created_by": "ai-lab",
+          "version": "1.0"
+        }
+        """.strip(),
+        encoding="utf-8",
+    )
+
+    errors = validate_dataset_package("broken_v1", registry_path=registry_dir / "datasets.json")
+    assert "labels.csv is required for datasets with has_labels=true" in errors

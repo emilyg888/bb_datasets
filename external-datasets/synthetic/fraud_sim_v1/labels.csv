@@ -1,0 +1,4 @@
+transaction_id,is_fraud
+sim_001,true
+sim_002,true
+sim_003,false

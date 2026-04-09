@@ -1,0 +1,4 @@
+case_id,description,expected_signal,severity
+edge_001,Single very large debit,spike,high
+edge_002,Five same-second debits,velocity,high
+edge_003,Normal recurring payment,none,low

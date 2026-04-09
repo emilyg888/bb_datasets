@@ -1,0 +1,4 @@
+campaign_id,spend,clicks,impressions,date,channel
+camp_001,1200.50,80,10000,2024-01-01,search
+camp_002,750.00,44,8300,2024-01-02,social
+camp_003,980.75,61,9100,2024-01-03,email

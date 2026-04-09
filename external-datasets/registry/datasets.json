@@ -1,0 +1,44 @@
+{
+  "campaign_v1": {
+    "domain": "marketing",
+    "path": "../marketing/campaign_v1",
+    "version": "1.0",
+    "tier": "silver",
+    "has_labels": false
+  },
+  "edge_cases_v1": {
+    "domain": "synthetic",
+    "path": "../synthetic/edge_cases_v1",
+    "version": "1.0",
+    "tier": "test",
+    "has_labels": false
+  },
+  "fraud_gold": {
+    "domain": "fraud",
+    "path": "../fraud/fraud_gold",
+    "version": "gold",
+    "tier": "gold",
+    "has_labels": true
+  },
+  "fraud_v1": {
+    "domain": "fraud",
+    "path": "../fraud/fraud_v1",
+    "version": "1.0",
+    "tier": "bronze",
+    "has_labels": true
+  },
+  "fraud_v2": {
+    "domain": "fraud",
+    "path": "../fraud/fraud_v2",
+    "version": "2.0",
+    "tier": "silver",
+    "has_labels": false
+  },
+  "synthetic_fraud": {
+    "domain": "fraud",
+    "path": "../synthetic/fraud_sim_v1",
+    "version": "1.0",
+    "tier": "test",
+    "has_labels": true
+  }
+}

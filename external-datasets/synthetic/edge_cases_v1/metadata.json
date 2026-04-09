@@ -1,0 +1,9 @@
+{
+  "name": "edge_cases_v1",
+  "domain": "synthetic",
+  "description": "Edge-case scenarios used for smoke testing rule coverage.",
+  "primary_keys": ["case_id"],
+  "evaluation_metric": "coverage",
+  "created_by": "ai-lab",
+  "version": "1.0"
+}

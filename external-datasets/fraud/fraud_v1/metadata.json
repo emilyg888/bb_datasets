@@ -1,0 +1,11 @@
+{
+  "name": "fraud_v1",
+  "domain": "fraud",
+  "description": "Baseline transaction-labelled fraud dataset.",
+  "label_column": "is_fraud",
+  "primary_keys": ["transaction_id"],
+  "time_column": "timestamp",
+  "evaluation_metric": "f1_score",
+  "created_by": "ai-lab",
+  "version": "1.0"
+}

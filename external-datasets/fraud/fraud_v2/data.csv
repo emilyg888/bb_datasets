@@ -1,0 +1,4 @@
+transaction_id,account_id,amount,timestamp,country,merchant_category,channel
+txn_101,acct_010,95.00,2024-02-01T08:00:00,AU,retail,card
+txn_102,acct_010,120.10,2024-02-01T08:05:00,AU,utilities,card
+txn_103,acct_011,8200.00,2024-02-01T08:15:00,SG,supplier,wire

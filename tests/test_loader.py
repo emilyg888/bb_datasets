@@ -1,7 +1,7 @@
 import duckdb
 
 from datasets.generator import generate_stub_data
-from datasets.loader import load_to_duckdb
+from datasets.loader import load_dataset, load_to_duckdb
 
 
 def test_load_creates_all_tables(tmp_path):
@@ -34,3 +34,29 @@ def test_load_is_idempotent(tmp_path):
         assert conn.execute("SELECT COUNT(*) FROM transactions").fetchone()[0] == 12
     finally:
         conn.close()
+
+
+def test_load_dataset_reads_metadata_schema_and_labels():
+    dataset = load_dataset("fraud_gold")
+
+    assert dataset.metadata["evaluation_metric"] == "f1_score"
+    assert dataset.schema["columns"]["amount"] == "float"
+    assert list(dataset.data.columns) == [
+        "transaction_id",
+        "account_id",
+        "amount",
+        "timestamp",
+        "country",
+        "merchant_category",
+        "channel",
+    ]
+    assert dataset.labels is not None
+    assert dataset.labels["is_fraud"].tolist() == [False, True, True, False]
+
+
+def test_load_dataset_evaluation_frame_joins_labels():
+    dataset = load_dataset("fraud_gold")
+    merged = dataset.evaluation_frame()
+
+    assert "is_fraud" in merged.columns
+    assert len(merged) == len(dataset.data)

@@ -1,0 +1,10 @@
+{
+  "columns": {
+    "transaction_id": "string",
+    "account_id": "string",
+    "amount": "float",
+    "timestamp": "datetime",
+    "country": "string",
+    "merchant_category": "string"
+  }
+}

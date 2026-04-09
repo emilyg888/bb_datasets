@@ -1,0 +1,11 @@
+{
+  "name": "synthetic_fraud",
+  "domain": "fraud",
+  "description": "Synthetic fraud scenarios for fast regression and exploration runs.",
+  "label_column": "is_fraud",
+  "primary_keys": ["transaction_id"],
+  "time_column": "timestamp",
+  "evaluation_metric": "f1_score",
+  "created_by": "ai-lab",
+  "version": "1.0"
+}

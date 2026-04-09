@@ -1,0 +1,4 @@
+transaction_id,account_id,amount,timestamp,country,merchant_category
+txn_001,acct_001,120.50,2024-01-10T09:00:00,AU,retail
+txn_002,acct_002,4100.00,2024-01-10T09:05:00,AU,supplier
+txn_003,acct_001,980.75,2024-01-10T09:10:00,NZ,utilities

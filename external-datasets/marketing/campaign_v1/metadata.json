@@ -1,0 +1,10 @@
+{
+  "name": "campaign_v1",
+  "domain": "marketing",
+  "description": "Marketing campaign performance dataset.",
+  "primary_keys": ["campaign_id"],
+  "time_column": "date",
+  "evaluation_metric": "roi",
+  "created_by": "ai-lab",
+  "version": "1.0"
+}

@@ -1,0 +1,5 @@
+transaction_id,is_fraud
+txn_g001,false
+txn_g002,true
+txn_g003,true
+txn_g004,false
