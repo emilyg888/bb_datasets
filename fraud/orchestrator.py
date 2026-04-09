@@ -30,8 +30,14 @@ from runtime.learning.updater import Updater  # noqa: E402
 from runtime.registry import PatternRegistry  # noqa: E402
 from runtime.selector import Selector  # noqa: E402
 
-from fraud.features import build_features  # noqa: E402
-from fraud.load import load_transactions  # noqa: E402
+from fraud.loop import (  # noqa: E402
+    DEFAULT_EXPLORATION_DATASET,
+    DEFAULT_PHASE_LOG_PATH,
+    DEFAULT_VALIDATION_DATASET,
+    prepare_dataset_frame,
+    run_detector_phase,
+    run_two_phase_loop,
+)
 
 
 # Patterns whose handlers actually return scored DataFrames
@@ -46,38 +52,22 @@ def _resolve_paths(config) -> None:
         config.promotion.audit_log = str(RUNTIME_REPO / config.promotion.audit_log)
 
 
-def _confusion(df) -> dict[str, int]:
-    truth = df["fraud_flag"].astype(bool)
-    pred  = df["predicted_fraud"].astype(bool)
-    return {
-        "tp": int(( truth &  pred).sum()),
-        "fp": int((~truth &  pred).sum()),
-        "fn": int(( truth & ~pred).sum()),
-        "tn": int((~truth & ~pred).sum()),
-    }
-
-
-def _metrics(c: dict[str, int]) -> dict[str, float]:
-    p = c["tp"] / (c["tp"] + c["fp"]) if (c["tp"] + c["fp"]) else 0.0
-    r = c["tp"] / (c["tp"] + c["fn"]) if (c["tp"] + c["fn"]) else 0.0
-    f = 2 * p * r / (p + r) if (p + r) else 0.0
-    return {"precision": p, "recall": r, "f1": f}
-
-
 def _run_one_detector(pattern, df, config_override: dict | None = None) -> dict:
-    fn = pattern.resolve_handler()
-    if fn is None:
-        return {"error": f"no handler for {pattern.id}"}
-    cfg = {**pattern.config, **(config_override or {})}
-    scored = fn(df, **cfg)
-    c = _confusion(scored)
-    m = _metrics(c)
+    result = run_detector_phase(
+        pattern,
+        df,
+        phase="exploration",
+        dataset_id="adhoc",
+        config_override=config_override,
+    )
+    if result.error is not None:
+        return {"error": result.error}
     return {
-        "pattern_id": pattern.id,
-        "config":     cfg,
-        "confusion":  c,
-        "metrics":    m,
-        "n_predicted": int(scored["predicted_fraud"].sum()),
+        "pattern_id": result.pattern_id,
+        "config": result.config,
+        "confusion": result.confusion,
+        "metrics": result.metrics,
+        "n_predicted": result.n_predicted,
     }
 
 
@@ -179,6 +169,9 @@ def run(
     tune:    str | None = None,
     record:  bool = False,
     apply:   bool = False,
+    exploration_dataset_id: str = DEFAULT_EXPLORATION_DATASET,
+    validation_dataset_id: str = DEFAULT_VALIDATION_DATASET,
+    phase_log_path: str | Path = DEFAULT_PHASE_LOG_PATH,
 ) -> int:
     config = load_config(str(RUNTIME_REPO / "runtime" / "runtime.yaml"))
     _resolve_paths(config)
@@ -194,14 +187,10 @@ def run(
         print("no fraud detector patterns registered")
         return 1
 
-    print(f"Loading transactions from DuckDB...")
-    df = load_transactions()
-    print(f"  loaded {len(df):,} rows")
-
-    print("Building features...")
-    df = build_features(df)
-
     if tune:
+        print(f"Loading exploration dataset: {exploration_dataset_id}")
+        df = prepare_dataset_frame(exploration_dataset_id)
+        print(f"  loaded {len(df):,} rows")
         target = tune  # pattern id (cli sets this to v1 by default)
         pattern = next((p for p in detectors if p.id == target), None)
         if pattern is None:
@@ -224,12 +213,17 @@ def run(
         return 0
 
     if compare:
+        print(f"Loading exploration dataset: {exploration_dataset_id}")
+        df = prepare_dataset_frame(exploration_dataset_id)
+        print(f"  loaded {len(df):,} rows")
         print(f"\n=== compare mode: scoring all {len(detectors)} fraud detectors ===\n")
         results = []
         for p in detectors:
             r = _run_one_detector(p, df)
             results.append(r)
 
+        errors = [r for r in results if "error" in r]
+        results = [r for r in results if "error" not in r]
         results.sort(key=lambda r: r["metrics"]["f1"], reverse=True)
         for r in results:
             m = r["metrics"]
@@ -237,6 +231,10 @@ def run(
             print(f"  {r['pattern_id']:25s}  precision={m['precision']:.3f}  "
                   f"recall={m['recall']:.3f}  f1={m['f1']:.3f}  "
                   f"(TP={c['tp']} FP={c['fp']} FN={c['fn']})")
+        for r in errors:
+            print(f"  {r['pattern_id']:25s}  error={r['error']}")
+        if not results:
+            return 1
         print(f"\n  → best: {results[0]['pattern_id']}  f1={results[0]['metrics']['f1']:.3f}")
 
         if record:
@@ -251,30 +249,42 @@ def run(
         pattern = chosen[0]
         print(f"  Selector chose: {pattern.id}")
     else:
-        # Inside the orchestrator we've already filtered to fraud detectors,
-        # so the Selector's relevance gate is too aggressive — fall back to
-        # the highest-confidence detector.
         pattern = max(detectors, key=lambda p: p.confidence)
         print(f"  Selector found no relevance match — falling back to "
               f"highest-confidence detector: {pattern.id}")
     print(f"  config:         {pattern.config}")
 
-    result = _run_one_detector(pattern, df)
-    if "error" in result:
-        print(result["error"])
-        return 1
+    print(f"  exploration:    {exploration_dataset_id}")
+    print(f"  validation:     {validation_dataset_id}")
 
-    c, m = result["confusion"], result["metrics"]
-    print(f"\n--- evaluation against ground truth ---")
-    print(f"  TP={c['tp']:>5}  FP={c['fp']:>5}")
-    print(f"  FN={c['fn']:>5}  TN={c['tn']:>5}")
-    print(f"\n  precision = {m['precision']:.3f}")
-    print(f"  recall    = {m['recall']:.3f}")
-    print(f"  f1        = {m['f1']:.3f}")
+    exploration, validation = run_two_phase_loop(
+        pattern,
+        query=query,
+        exploration_dataset_id=exploration_dataset_id,
+        validation_dataset_id=validation_dataset_id,
+        phase_log_path=phase_log_path,
+    )
+    for result in (exploration, validation):
+        if result.error:
+            print(f"{result.phase} failed: {result.error}")
+            return 1
+
+    for result in (exploration, validation):
+        c = result.confusion
+        m = result.metrics
+        print(f"\n--- {result.phase} on {result.dataset_id} ---")
+        print(f"  TP={c['tp']:>5}  FP={c['fp']:>5}")
+        print(f"  FN={c['fn']:>5}  TN={c['tn']:>5}")
+        print(f"\n  precision = {m['precision']:.3f}")
+        print(f"  recall    = {m['recall']:.3f}")
+        print(f"  f1        = {m['f1']:.3f}")
+
+    print(f"\n  phase log:      {phase_log_path}")
 
     if record:
         print()
-        _record_score(updater, pattern.id, m["f1"])
+        _record_score(updater, pattern.id, validation.metrics["f1"])
+
     return 0
 
 
@@ -291,6 +301,12 @@ if __name__ == "__main__":
                     help="Record F1 into registry as the pattern's EMA score")
     ap.add_argument("--apply",   action="store_true",
                     help="With --tune: write best threshold into the pattern config")
+    ap.add_argument("--exploration-dataset", default=DEFAULT_EXPLORATION_DATASET,
+                    help="Registered dataset id used for exploration-phase selection/tuning")
+    ap.add_argument("--validation-dataset", default=DEFAULT_VALIDATION_DATASET,
+                    help="Registered dataset id used for validation/judge scoring")
+    ap.add_argument("--phase-log", default=str(DEFAULT_PHASE_LOG_PATH),
+                    help="TSV file path for append-only phase results")
     args = ap.parse_args()
     raise SystemExit(run(
         args.query,
@@ -298,4 +314,7 @@ if __name__ == "__main__":
         tune=args.tune,
         record=args.record,
         apply=args.apply,
+        exploration_dataset_id=args.exploration_dataset,
+        validation_dataset_id=args.validation_dataset,
+        phase_log_path=args.phase_log,
     ))

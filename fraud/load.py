@@ -1,4 +1,4 @@
-"""Load transactions from the bb_datasets DuckDB sandbox."""
+"""Load fraud transactions from DuckDB or registered dataset packages."""
 
 from __future__ import annotations
 
@@ -6,6 +6,8 @@ from pathlib import Path
 
 import duckdb
 import pandas as pd
+
+from datasets.loader import load_dataset
 
 
 # DuckDB lives at <repo>/exports/duckdb/sandbox.db; resolve against this
@@ -36,3 +38,44 @@ def load_transactions(db_path: str | Path = DEFAULT_DB) -> pd.DataFrame:
         """).df()
     finally:
         conn.close()
+
+
+def load_registered_transactions(dataset_id: str) -> pd.DataFrame:
+    """Return a detector-ready dataframe from a registered fraud dataset."""
+    dataset = load_dataset(dataset_id)
+    frame = dataset.evaluation_frame().copy()
+
+    rename_map: dict[str, str] = {}
+    if "transaction_id" in frame.columns and "txn_id" not in frame.columns:
+        rename_map["transaction_id"] = "txn_id"
+
+    label_column = dataset.metadata.get("label_column")
+    if label_column and label_column in frame.columns and label_column != "fraud_flag":
+        rename_map[label_column] = "fraud_flag"
+
+    if rename_map:
+        frame = frame.rename(columns=rename_map)
+
+    if "fraud_flag" not in frame.columns:
+        raise ValueError(
+            f"Registered dataset {dataset_id!r} must provide a label column for evaluation"
+        )
+
+    if "merchant_category" not in frame.columns:
+        frame["merchant_category"] = "Unknown"
+    if "risk_rating" not in frame.columns:
+        frame["risk_rating"] = "Unknown"
+
+    frame["fraud_flag"] = frame["fraud_flag"].map(_coerce_bool)
+
+    return frame
+
+
+def _coerce_bool(value) -> bool:
+    if isinstance(value, bool):
+        return value
+    if pd.isna(value):
+        return False
+    if isinstance(value, (int, float)):
+        return bool(value)
+    return str(value).strip().lower() in {"true", "1", "yes", "y"}
