@@ -3,19 +3,31 @@ __pycache__/
 *.pyc
 *.pyo
 .pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.hypothesis/
+.tox/
+.nox/
+.coverage
+htmlcov/
 
 # Virtual env
 .venv/
 venv/
+
+# Packaging
+*.egg-info/
 
 # DuckDB / generated artifacts
 exports/
 generated/
 raw/
 validated/
+fraud/memory/
 
 # OS
 .DS_Store
 
 # Editor / agent state
 .claude/
+.codex/
