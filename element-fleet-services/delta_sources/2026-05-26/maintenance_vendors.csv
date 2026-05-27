@@ -1,0 +1,9 @@
+vendor_id,vendor_name,vendor_type,state,preferred_vendor_flag,average_approval_hours,monthly_capacity_jobs,effective_at,updated_at,delta_action
+MNT-VEN-009,Synthetic Service Network 09,Glass Repair,NT,N,8.3,253,2026-05-25T14:59:00,2026-05-26T08:01:00,UPDATE
+MNT-VEN-010,Synthetic Service Network 10,Glass Repair,NT,N,1.4,56,2026-05-25T14:58:00,2026-05-26T08:02:00,UPDATE
+MNT-VEN-011,Synthetic Service Network 11,Tyre Network,SA,N,3.6,316,2026-05-25T14:57:00,2026-05-26T08:03:00,UPDATE
+MNT-VEN-012,Synthetic Service Network 12,Independent Workshop,QLD,N,7.0,294,2026-05-25T14:56:00,2026-05-26T08:04:00,UPDATE
+MNT-VEN-013,Synthetic Service Network 13,Mobile Service,VIC,Y,1.7,319,2026-05-25T14:55:00,2026-05-26T08:05:00,UPDATE
+MNT-VEN-014,Synthetic Service Network 14,Independent Workshop,NSW,Y,5.5,152,2026-05-25T14:54:00,2026-05-26T08:06:00,UPDATE
+MNT-VEN-015,Synthetic Service Network 15,Glass Repair,VIC,Y,10.0,425,2026-05-25T14:53:00,2026-05-26T08:07:00,UPDATE
+MNT-VEN-016,Synthetic Service Network 16,Tyre Network,SA,N,5.6,219,2026-05-25T14:52:00,2026-05-26T08:08:00,UPDATE

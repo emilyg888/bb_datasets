@@ -1,0 +1,16 @@
+source_date,table_name,row_count,extract_type,changed_from_previous_extract
+2026-05-26,clients.csv,18,synthetic_full_daily_extract,Y
+2026-05-26,crm_client_portal_events.csv,420,synthetic_full_daily_extract,Y
+2026-05-26,driver_app_events.csv,520,synthetic_full_daily_extract,N
+2026-05-26,ev_charging_sessions.csv,360,synthetic_full_daily_extract,Y
+2026-05-26,finance_billing_invoices.csv,240,synthetic_full_daily_extract,Y
+2026-05-26,fuel_card_transactions.csv,559,synthetic_full_daily_extract,N
+2026-05-26,fuel_cards.csv,105,synthetic_full_daily_extract,Y
+2026-05-26,insurance_claims.csv,85,synthetic_full_daily_extract,Y
+2026-05-26,leasing_contracts.csv,150,synthetic_full_daily_extract,Y
+2026-05-26,maintenance_vendors.csv,23,synthetic_full_daily_extract,Y
+2026-05-26,maintenance_work_orders.csv,320,synthetic_full_daily_extract,Y
+2026-05-26,remarketing_auction_results.csv,65,synthetic_full_daily_extract,Y
+2026-05-26,telematics_daily.csv,1190,synthetic_full_daily_extract,N
+2026-05-26,vehicle_registration_events.csv,150,synthetic_full_daily_extract,Y
+2026-05-26,vehicles.csv,150,synthetic_full_daily_extract,Y

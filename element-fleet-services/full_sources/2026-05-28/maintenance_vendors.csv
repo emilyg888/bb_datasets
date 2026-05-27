@@ -1,0 +1,24 @@
+vendor_id,vendor_name,vendor_type,state,preferred_vendor_flag,average_approval_hours,monthly_capacity_jobs,effective_at,updated_at
+MNT-VEN-001,Synthetic Service Network 01,Dealer,TAS,N,10.2,358,2026-05-26T14:52:00,2026-05-27T08:08:00
+MNT-VEN-002,Synthetic Service Network 02,Tyre Network,SA,Y,7.2,387,2026-05-27T14:59:00,2026-05-28T08:01:00
+MNT-VEN-003,Synthetic Service Network 03,Tyre Network,TAS,N,3.2,102,2026-05-27T14:58:00,2026-05-28T08:02:00
+MNT-VEN-004,Synthetic Service Network 04,Tyre Network,TAS,Y,2.0,241,2026-05-27T14:57:00,2026-05-28T08:03:00
+MNT-VEN-005,Synthetic Service Network 05,Glass Repair,QLD,Y,4.9,138,2026-05-27T14:56:00,2026-05-28T08:04:00
+MNT-VEN-006,Synthetic Service Network 06,Glass Repair,QLD,Y,2.3,190,2026-05-27T14:55:00,2026-05-28T08:05:00
+MNT-VEN-007,Synthetic Service Network 07,Tyre Network,QLD,N,10.2,360,2026-05-27T14:54:00,2026-05-28T08:06:00
+MNT-VEN-008,Synthetic Service Network 08,Dealer,TAS,N,6.0,142,2026-05-27T14:53:00,2026-05-28T08:07:00
+MNT-VEN-009,Synthetic Service Network 09,Glass Repair,NT,N,8.3,255,2026-05-27T14:52:00,2026-05-28T08:08:00
+MNT-VEN-010,Synthetic Service Network 10,Glass Repair,NT,N,1.4,56,2026-05-25T14:58:00,2026-05-26T08:02:00
+MNT-VEN-011,Synthetic Service Network 11,Tyre Network,SA,N,3.6,316,2026-05-25T14:57:00,2026-05-26T08:03:00
+MNT-VEN-012,Synthetic Service Network 12,Independent Workshop,QLD,N,7.0,294,2026-05-25T14:56:00,2026-05-26T08:04:00
+MNT-VEN-013,Synthetic Service Network 13,Mobile Service,VIC,Y,1.7,319,2026-05-25T14:55:00,2026-05-26T08:05:00
+MNT-VEN-014,Synthetic Service Network 14,Independent Workshop,NSW,Y,5.5,152,2026-05-25T14:54:00,2026-05-26T08:06:00
+MNT-VEN-015,Synthetic Service Network 15,Glass Repair,VIC,Y,10.0,425,2026-05-25T14:53:00,2026-05-26T08:07:00
+MNT-VEN-016,Synthetic Service Network 16,Tyre Network,SA,N,5.6,219,2026-05-25T14:52:00,2026-05-26T08:08:00
+MNT-VEN-017,Synthetic Service Network 17,Dealer,NT,N,9.4,163,2026-05-26T14:59:00,2026-05-27T08:01:00
+MNT-VEN-018,Synthetic Service Network 18,Tyre Network,TAS,Y,7.5,261,2026-05-26T14:58:00,2026-05-27T08:02:00
+MNT-VEN-019,Synthetic Service Network 19,Tyre Network,QLD,N,9.8,72,2026-05-26T14:57:00,2026-05-27T08:03:00
+MNT-VEN-020,Synthetic Service Network 20,Mobile Service,TAS,Y,3.7,317,2026-05-26T14:56:00,2026-05-27T08:04:00
+MNT-VEN-021,Synthetic Service Network 21,Tyre Network,TAS,Y,3.8,335,2026-05-26T14:55:00,2026-05-27T08:05:00
+MNT-VEN-022,Synthetic Service Network 22,Independent Workshop,VIC,N,11.6,252,2026-05-26T14:54:00,2026-05-27T08:06:00
+MNT-VEN-023,Synthetic Service Network 23,Dealer,SA,Y,1.9,109,2026-05-26T14:53:00,2026-05-27T08:07:00

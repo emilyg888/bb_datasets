@@ -1,0 +1,9 @@
+lease_id,vehicle_id,client_id,lease_product,term_months,monthly_rental_amount,management_fee_amount,included_services,residual_value_amount,lease_status,effective_at,updated_at,delta_action
+LES-00009,VEH-00009,CLI-0008,Finance Lease,48,752,41.61,management_only,12950.86,Renewal Review,2026-05-25T14:59:00,2026-05-26T08:01:00,UPDATE
+LES-00010,VEH-00010,CLI-0003,Fleet Management Only,36,1056,102.51,"maintenance,fuel,telematics,driver_app",16099.59,Closed,2026-05-25T14:58:00,2026-05-26T08:02:00,UPDATE
+LES-00011,VEH-00011,CLI-0016,Finance Lease,36,929,66.99,management_only,9804.58,Closed,2026-05-25T14:57:00,2026-05-26T08:03:00,UPDATE
+LES-00012,VEH-00012,CLI-0002,Novated Lease,60,699,117.74,"maintenance,fuel,registration",9751.03,Renewal Review,2026-05-25T14:56:00,2026-05-26T08:04:00,UPDATE
+LES-00013,VEH-00013,CLI-0015,Finance Lease,48,1134,76.12,"maintenance,accident,registration,billing",11444.63,Renewal Review,2026-05-25T14:55:00,2026-05-26T08:05:00,UPDATE
+LES-00014,VEH-00014,CLI-0018,Fleet Management Only,36,804,96.42,"maintenance,fuel,telematics,driver_app",11244.9,Renewal Review,2026-05-25T14:54:00,2026-05-26T08:06:00,UPDATE
+LES-00015,VEH-00015,CLI-0013,Finance Lease,60,1477,178.64,"maintenance,fuel,registration",14166.99,Closed,2026-05-25T14:53:00,2026-05-26T08:07:00,UPDATE
+LES-00016,VEH-00016,CLI-0002,Fleet Management Only,48,1500,171.53,"maintenance,fuel,registration",15191.91,Renewal Review,2026-05-25T14:52:00,2026-05-26T08:08:00,UPDATE

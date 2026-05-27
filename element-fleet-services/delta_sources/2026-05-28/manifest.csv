@@ -1,0 +1,13 @@
+source_date,table_name,row_count,delta_type
+2026-05-28,clients.csv,8,synthetic_update_extract
+2026-05-28,vehicles.csv,8,synthetic_update_extract
+2026-05-28,leasing_contracts.csv,8,synthetic_update_extract
+2026-05-28,maintenance_vendors.csv,8,synthetic_update_extract
+2026-05-28,maintenance_work_orders.csv,8,synthetic_update_extract
+2026-05-28,fuel_cards.csv,8,synthetic_update_extract
+2026-05-28,insurance_claims.csv,8,synthetic_update_extract
+2026-05-28,vehicle_registration_events.csv,8,synthetic_update_extract
+2026-05-28,finance_billing_invoices.csv,8,synthetic_update_extract
+2026-05-28,crm_client_portal_events.csv,8,synthetic_update_extract
+2026-05-28,ev_charging_sessions.csv,8,synthetic_update_extract
+2026-05-28,remarketing_auction_results.csv,8,synthetic_update_extract

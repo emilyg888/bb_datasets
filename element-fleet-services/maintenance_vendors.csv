@@ -1,0 +1,24 @@
+vendor_id,vendor_name,vendor_type,state,preferred_vendor_flag,average_approval_hours,monthly_capacity_jobs,effective_at,updated_at
+MNT-VEN-001,Synthetic Service Network 01,Dealer,TAS,Y,10.2,351,2020-07-18T00:00:00,2020-10-17T00:00:00
+MNT-VEN-002,Synthetic Service Network 02,Tyre Network,SA,N,7.2,379,2020-08-04T00:00:00,2020-11-04T00:00:00
+MNT-VEN-003,Synthetic Service Network 03,Tyre Network,TAS,Y,3.2,94,2020-08-21T00:00:00,2020-11-22T00:00:00
+MNT-VEN-004,Synthetic Service Network 04,Tyre Network,TAS,N,2.0,233,2020-09-07T00:00:00,2020-12-10T00:00:00
+MNT-VEN-005,Synthetic Service Network 05,Glass Repair,QLD,N,4.9,130,2020-09-24T00:00:00,2020-12-28T00:00:00
+MNT-VEN-006,Synthetic Service Network 06,Glass Repair,QLD,N,2.3,182,2020-10-11T00:00:00,2021-01-15T00:00:00
+MNT-VEN-007,Synthetic Service Network 07,Tyre Network,QLD,Y,10.2,352,2020-10-28T00:00:00,2021-02-02T00:00:00
+MNT-VEN-008,Synthetic Service Network 08,Dealer,TAS,Y,6.0,134,2020-11-14T00:00:00,2021-02-20T00:00:00
+MNT-VEN-009,Synthetic Service Network 09,Glass Repair,NT,Y,8.3,247,2020-12-01T00:00:00,2021-03-10T00:00:00
+MNT-VEN-010,Synthetic Service Network 10,Glass Repair,NT,Y,1.4,50,2020-12-18T00:00:00,2021-03-28T00:00:00
+MNT-VEN-011,Synthetic Service Network 11,Tyre Network,SA,Y,3.6,310,2021-01-04T00:00:00,2021-04-15T00:00:00
+MNT-VEN-012,Synthetic Service Network 12,Independent Workshop,QLD,Y,7.0,288,2021-01-21T00:00:00,2021-05-03T00:00:00
+MNT-VEN-013,Synthetic Service Network 13,Mobile Service,VIC,N,1.7,313,2021-02-07T00:00:00,2021-05-21T00:00:00
+MNT-VEN-014,Synthetic Service Network 14,Independent Workshop,NSW,N,5.5,146,2021-02-24T00:00:00,2021-06-08T00:00:00
+MNT-VEN-015,Synthetic Service Network 15,Glass Repair,VIC,N,10.0,419,2021-03-13T00:00:00,2021-06-26T00:00:00
+MNT-VEN-016,Synthetic Service Network 16,Tyre Network,SA,Y,5.6,213,2021-03-30T00:00:00,2021-07-14T00:00:00
+MNT-VEN-017,Synthetic Service Network 17,Dealer,NT,Y,9.4,156,2021-04-16T00:00:00,2021-08-01T00:00:00
+MNT-VEN-018,Synthetic Service Network 18,Tyre Network,TAS,N,7.5,254,2021-05-03T00:00:00,2021-08-19T00:00:00
+MNT-VEN-019,Synthetic Service Network 19,Tyre Network,QLD,Y,9.8,65,2021-05-20T00:00:00,2021-09-06T00:00:00
+MNT-VEN-020,Synthetic Service Network 20,Mobile Service,TAS,N,3.7,310,2021-06-06T00:00:00,2021-09-24T00:00:00
+MNT-VEN-021,Synthetic Service Network 21,Tyre Network,TAS,N,3.8,328,2021-06-23T00:00:00,2021-10-12T00:00:00
+MNT-VEN-022,Synthetic Service Network 22,Independent Workshop,VIC,Y,11.6,245,2021-07-10T00:00:00,2021-10-30T00:00:00
+MNT-VEN-023,Synthetic Service Network 23,Dealer,SA,N,1.9,102,2021-07-27T00:00:00,2021-11-17T00:00:00

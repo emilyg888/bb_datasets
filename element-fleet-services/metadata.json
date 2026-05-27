@@ -1,0 +1,284 @@
+{
+  "name": "element_fleet_services_synthetic",
+  "domain": "fleet_management",
+  "description": "Synthetic Australian fleet-management datasets inspired by public information about Custom Fleet Australia / Element Fleet Services Australia Pty Ltd business areas.",
+  "entity": "ELEMENT FLEET SERVICES AUSTRALIA PTY LTD / Custom Fleet Australia",
+  "synthetic": true,
+  "privacy": "No real customers, drivers, vehicles, vendors, invoices, claims, GPS traces, or transactions are represented.",
+  "created_by": "Codex",
+  "version": "1.0",
+  "tables": {
+    "clients.csv": {
+      "row_count": 18,
+      "columns": [
+        "client_id",
+        "abn",
+        "client_name",
+        "industry_segment",
+        "email_domain",
+        "address_line_1",
+        "suburb",
+        "state",
+        "postcode",
+        "country",
+        "headquarters_state",
+        "fleet_size_band",
+        "contract_start_date",
+        "client_status",
+        "effective_at",
+        "updated_at"
+      ]
+    },
+    "vehicles.csv": {
+      "row_count": 150,
+      "columns": [
+        "vehicle_id",
+        "client_id",
+        "vin",
+        "registration_plate",
+        "asset_type",
+        "make",
+        "model",
+        "model_year",
+        "fuel_type",
+        "state_registered",
+        "odometer_km",
+        "in_service_date",
+        "lease_end_date",
+        "vehicle_status",
+        "telematics_device_id",
+        "telematics_device_model",
+        "telematics_install_date",
+        "effective_at",
+        "updated_at"
+      ]
+    },
+    "leasing_contracts.csv": {
+      "row_count": 150,
+      "columns": [
+        "lease_id",
+        "vehicle_id",
+        "client_id",
+        "lease_product",
+        "term_months",
+        "monthly_rental_amount",
+        "management_fee_amount",
+        "included_services",
+        "residual_value_amount",
+        "lease_status",
+        "effective_at",
+        "updated_at"
+      ]
+    },
+    "maintenance_vendors.csv": {
+      "row_count": 23,
+      "columns": [
+        "vendor_id",
+        "vendor_name",
+        "vendor_type",
+        "state",
+        "preferred_vendor_flag",
+        "average_approval_hours",
+        "monthly_capacity_jobs",
+        "effective_at",
+        "updated_at"
+      ]
+    },
+    "maintenance_work_orders.csv": {
+      "row_count": 320,
+      "columns": [
+        "work_order_id",
+        "vehicle_id",
+        "client_id",
+        "vendor_id",
+        "opened_date",
+        "closed_date",
+        "service_category",
+        "odometer_km",
+        "authorised_amount",
+        "invoice_amount",
+        "approval_status",
+        "effective_at",
+        "updated_at"
+      ]
+    },
+    "fuel_cards.csv": {
+      "row_count": 105,
+      "columns": [
+        "fuel_card_id",
+        "vehicle_id",
+        "client_id",
+        "provider_name",
+        "card_status",
+        "monthly_limit_amount",
+        "effective_at",
+        "updated_at"
+      ]
+    },
+    "fuel_card_transactions.csv": {
+      "row_count": 559,
+      "columns": [
+        "fuel_transaction_id",
+        "fuel_card_id",
+        "vehicle_id",
+        "client_id",
+        "transaction_datetime",
+        "merchant_state",
+        "fuel_product",
+        "litres",
+        "gross_amount",
+        "exception_flag"
+      ]
+    },
+    "telematics_daily.csv": {
+      "row_count": 1190,
+      "columns": [
+        "telematics_event_id",
+        "vehicle_id",
+        "client_id",
+        "telematics_device_id",
+        "device_firmware_version",
+        "event_date",
+        "provider_name",
+        "distance_km",
+        "idle_minutes",
+        "harsh_events_count",
+        "gps_fix_rate_pct"
+      ]
+    },
+    "insurance_claims.csv": {
+      "row_count": 85,
+      "columns": [
+        "claim_id",
+        "claim_number",
+        "insurer_claim_reference",
+        "vehicle_id",
+        "client_id",
+        "incident_date",
+        "claim_lodged_date",
+        "incident_type",
+        "claim_status",
+        "claim_handler_email_domain",
+        "repairer_vendor_id",
+        "replacement_vehicle_required_flag",
+        "estimated_repair_amount",
+        "at_fault_flag",
+        "days_off_road",
+        "effective_at",
+        "updated_at"
+      ]
+    },
+    "vehicle_registration_events.csv": {
+      "row_count": 150,
+      "columns": [
+        "registration_event_id",
+        "vehicle_id",
+        "client_id",
+        "registration_state",
+        "plate_number",
+        "renewal_due_date",
+        "renewal_status",
+        "ctp_provider",
+        "renewal_amount",
+        "effective_at",
+        "updated_at"
+      ]
+    },
+    "finance_billing_invoices.csv": {
+      "row_count": 240,
+      "columns": [
+        "invoice_id",
+        "invoice_number",
+        "client_id",
+        "invoice_date",
+        "invoice_due_date",
+        "billing_period",
+        "billing_contact_email_domain",
+        "purchase_order_number",
+        "lease_charges_amount",
+        "maintenance_rebill_amount",
+        "fuel_rebill_amount",
+        "management_fees_amount",
+        "invoice_status",
+        "payment_terms_days",
+        "payment_method",
+        "effective_at",
+        "updated_at"
+      ]
+    },
+    "crm_client_portal_events.csv": {
+      "row_count": 420,
+      "columns": [
+        "portal_event_id",
+        "portal_session_id",
+        "client_id",
+        "portal_user_id",
+        "portal_user_role",
+        "client_contact_email_domain",
+        "event_datetime",
+        "channel",
+        "request_reference",
+        "event_type",
+        "case_priority",
+        "first_response_hours",
+        "sla_breach_flag",
+        "case_status",
+        "effective_at",
+        "updated_at"
+      ]
+    },
+    "driver_app_events.csv": {
+      "row_count": 520,
+      "columns": [
+        "driver_app_event_id",
+        "vehicle_id",
+        "client_id",
+        "event_datetime",
+        "app_event_type",
+        "device_platform",
+        "completion_status",
+        "session_duration_seconds"
+      ]
+    },
+    "ev_charging_sessions.csv": {
+      "row_count": 360,
+      "columns": [
+        "charging_session_id",
+        "vehicle_id",
+        "client_id",
+        "charger_id",
+        "charger_serial_number",
+        "meter_id",
+        "session_start_datetime",
+        "session_end_datetime",
+        "charger_location_type",
+        "connector_type",
+        "tariff_type",
+        "network_provider",
+        "energy_kwh",
+        "gross_amount",
+        "reimbursement_status",
+        "effective_at",
+        "updated_at"
+      ]
+    },
+    "remarketing_auction_results.csv": {
+      "row_count": 65,
+      "columns": [
+        "remarketing_event_id",
+        "vehicle_id",
+        "client_id",
+        "auction_date",
+        "auction_channel",
+        "odometer_km",
+        "condition_grade",
+        "reserve_amount",
+        "sale_amount",
+        "days_to_sell",
+        "sale_status",
+        "effective_at",
+        "updated_at"
+      ]
+    }
+  }
+}

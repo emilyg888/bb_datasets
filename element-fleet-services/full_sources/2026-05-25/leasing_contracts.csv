@@ -1,0 +1,151 @@
+lease_id,vehicle_id,client_id,lease_product,term_months,monthly_rental_amount,management_fee_amount,included_services,residual_value_amount,lease_status,effective_at,updated_at
+LES-00001,VEH-00001,CLI-0009,Novated Lease,36,1538,130.29,management_only,14934.51,Active,2026-05-24T14:59:00,2026-05-25T08:01:00
+LES-00002,VEH-00002,CLI-0005,Novated Lease,48,889,175.74,"maintenance,fuel,registration",8641.63,Renewal Review,2026-05-24T14:58:00,2026-05-25T08:02:00
+LES-00003,VEH-00003,CLI-0013,Fleet Management Only,36,1147,150.49,management_only,13952.02,Renewal Review,2026-05-24T14:57:00,2026-05-25T08:03:00
+LES-00004,VEH-00004,CLI-0011,Novated Lease,60,1242,147.46,"maintenance,fuel,registration",12016.81,Closed,2026-05-24T14:56:00,2026-05-25T08:04:00
+LES-00005,VEH-00005,CLI-0010,Finance Lease,36,1264,167.66,"maintenance,accident,registration,billing",21030.46,Closed,2026-05-24T14:55:00,2026-05-25T08:05:00
+LES-00006,VEH-00006,CLI-0011,Operating Lease,36,591,67.67,"maintenance,fuel,telematics,driver_app",7245.28,Active,2026-05-24T14:54:00,2026-05-25T08:06:00
+LES-00007,VEH-00007,CLI-0016,Fleet Management Only,48,586,74.74,"maintenance,fuel,telematics,driver_app",7615.34,Renewal Review,2026-05-24T14:53:00,2026-05-25T08:07:00
+LES-00008,VEH-00008,CLI-0018,Novated Lease,48,1695,70.70,"maintenance,fuel,telematics,driver_app",25164.05,Renewal Review,2026-05-24T14:52:00,2026-05-25T08:08:00
+LES-00009,VEH-00009,CLI-0008,Finance Lease,48,752,41,management_only,12950.86,Active,2022-02-13T00:00:00,2022-04-23T00:00:00
+LES-00010,VEH-00010,CLI-0003,Fleet Management Only,36,1056,101,"maintenance,fuel,telematics,driver_app",16099.59,Renewal Review,2022-05-26T00:00:00,2022-08-04T00:00:00
+LES-00011,VEH-00011,CLI-0016,Finance Lease,36,929,66,management_only,9804.58,Renewal Review,2024-04-13T00:00:00,2024-06-23T00:00:00
+LES-00012,VEH-00012,CLI-0002,Novated Lease,60,699,116,"maintenance,fuel,registration",9751.03,Active,2024-04-04T00:00:00,2024-06-15T00:00:00
+LES-00013,VEH-00013,CLI-0015,Finance Lease,48,1134,75,"maintenance,accident,registration,billing",11444.63,Active,2023-01-11T00:00:00,2023-03-25T00:00:00
+LES-00014,VEH-00014,CLI-0018,Fleet Management Only,36,804,95,"maintenance,fuel,telematics,driver_app",11244.9,Active,2023-04-30T00:00:00,2023-07-13T00:00:00
+LES-00015,VEH-00015,CLI-0013,Finance Lease,60,1477,176,"maintenance,fuel,registration",14166.99,Renewal Review,2023-06-28T00:00:00,2023-09-11T00:00:00
+LES-00016,VEH-00016,CLI-0002,Fleet Management Only,48,1500,169,"maintenance,fuel,registration",15191.91,Active,2025-01-15T00:00:00,2025-04-01T00:00:00
+LES-00017,VEH-00017,CLI-0017,Fleet Management Only,48,1835,53,"maintenance,fuel,telematics,driver_app",18634.45,Closed,2024-11-06T00:00:00,2025-01-22T00:00:00
+LES-00018,VEH-00018,CLI-0008,Finance Lease,48,1830,81,"maintenance,fuel,registration",30163.01,Closed,2022-03-23T00:00:00,2022-06-09T00:00:00
+LES-00019,VEH-00019,CLI-0009,Finance Lease,36,833,112,"maintenance,fuel,telematics,driver_app",14504.73,Active,2023-09-07T00:00:00,2023-11-25T00:00:00
+LES-00020,VEH-00020,CLI-0018,Novated Lease,36,1228,167,"maintenance,fuel,telematics,driver_app",13221.53,Closed,2023-06-28T00:00:00,2023-09-16T00:00:00
+LES-00021,VEH-00021,CLI-0018,Novated Lease,60,1082,67,"maintenance,fuel,registration",14632.06,Active,2024-12-19T00:00:00,2025-03-10T00:00:00
+LES-00022,VEH-00022,CLI-0004,Finance Lease,60,1732,74,"maintenance,fuel,telematics,driver_app",28721.36,Closed,2023-07-12T00:00:00,2023-10-02T00:00:00
+LES-00023,VEH-00023,CLI-0002,Operating Lease,36,604,42,"maintenance,fuel,telematics,driver_app",8975.54,Closed,2023-07-21T00:00:00,2023-10-12T00:00:00
+LES-00024,VEH-00024,CLI-0014,Fleet Management Only,60,1373,42,"maintenance,fuel,telematics,driver_app",20289.05,Active,2022-08-18T00:00:00,2022-11-10T00:00:00
+LES-00025,VEH-00025,CLI-0005,Fleet Management Only,48,1509,97,management_only,14572.05,Active,2024-01-17T00:00:00,2024-04-11T00:00:00
+LES-00026,VEH-00026,CLI-0005,Fleet Management Only,48,843,147,management_only,9134.92,Closed,2022-12-29T00:00:00,2023-03-25T00:00:00
+LES-00027,VEH-00027,CLI-0004,Novated Lease,60,814,115,"maintenance,fuel,telematics,driver_app",14471.59,Active,2024-08-21T00:00:00,2024-11-16T00:00:00
+LES-00028,VEH-00028,CLI-0001,Operating Lease,48,1278,166,"maintenance,accident,registration,billing",16867.37,Active,2023-11-04T00:00:00,2024-01-31T00:00:00
+LES-00029,VEH-00029,CLI-0018,Finance Lease,36,1440,98,"maintenance,fuel,registration",16721.15,Renewal Review,2022-02-26T00:00:00,2022-05-26T00:00:00
+LES-00030,VEH-00030,CLI-0011,Finance Lease,36,1780,142,"maintenance,fuel,telematics,driver_app",30978.7,Active,2024-11-13T00:00:00,2025-02-11T00:00:00
+LES-00031,VEH-00031,CLI-0017,Fleet Management Only,60,908,75,management_only,12247.86,Active,2024-01-16T00:00:00,2024-04-16T00:00:00
+LES-00032,VEH-00032,CLI-0010,Operating Lease,48,1538,40,management_only,27222.88,Active,2024-04-04T00:00:00,2024-07-05T00:00:00
+LES-00033,VEH-00033,CLI-0006,Operating Lease,36,1714,125,"maintenance,fuel,telematics,driver_app",23060.24,Renewal Review,2023-09-09T00:00:00,2023-12-11T00:00:00
+LES-00034,VEH-00034,CLI-0011,Operating Lease,36,1105,172,management_only,11276.98,Active,2024-06-24T00:00:00,2024-09-26T00:00:00
+LES-00035,VEH-00035,CLI-0011,Novated Lease,36,1269,138,management_only,12005.27,Closed,2023-09-28T00:00:00,2024-01-01T00:00:00
+LES-00036,VEH-00036,CLI-0003,Novated Lease,36,918,127,management_only,12428.16,Closed,2023-02-03T00:00:00,2023-05-10T00:00:00
+LES-00037,VEH-00037,CLI-0001,Finance Lease,36,1092,65,management_only,13495.79,Active,2023-03-25T00:00:00,2023-06-30T00:00:00
+LES-00038,VEH-00038,CLI-0004,Finance Lease,36,1662,128,management_only,22438.17,Active,2024-08-09T00:00:00,2024-11-15T00:00:00
+LES-00039,VEH-00039,CLI-0018,Novated Lease,48,599,70,management_only,6193.94,Closed,2024-08-30T00:00:00,2024-12-07T00:00:00
+LES-00040,VEH-00040,CLI-0008,Novated Lease,36,806,118,management_only,14439.93,Active,2022-06-08T00:00:00,2022-09-16T00:00:00
+LES-00041,VEH-00041,CLI-0005,Fleet Management Only,60,1735,121,"maintenance,fuel,telematics,driver_app",23030.45,Active,2022-11-09T00:00:00,2023-02-18T00:00:00
+LES-00042,VEH-00042,CLI-0002,Operating Lease,48,1274,119,"maintenance,fuel,telematics,driver_app",20601.59,Active,2024-03-08T00:00:00,2024-06-18T00:00:00
+LES-00043,VEH-00043,CLI-0013,Novated Lease,60,1742,156,"maintenance,accident,registration,billing",26988.11,Closed,2025-01-23T00:00:00,2025-05-06T00:00:00
+LES-00044,VEH-00044,CLI-0013,Fleet Management Only,36,1503,78,"maintenance,accident,registration,billing",13954.05,Active,2024-04-08T00:00:00,2024-07-21T00:00:00
+LES-00045,VEH-00045,CLI-0013,Fleet Management Only,48,910,39,management_only,9430.22,Active,2022-02-25T00:00:00,2022-04-26T00:00:00
+LES-00046,VEH-00046,CLI-0013,Fleet Management Only,60,1360,163,"maintenance,fuel,registration",20878.69,Closed,2023-03-10T00:00:00,2023-05-10T00:00:00
+LES-00047,VEH-00047,CLI-0003,Novated Lease,60,944,178,management_only,12960.45,Active,2025-01-09T00:00:00,2025-03-12T00:00:00
+LES-00048,VEH-00048,CLI-0001,Novated Lease,60,874,152,"maintenance,fuel,telematics,driver_app",13182.38,Active,2022-11-09T00:00:00,2023-01-11T00:00:00
+LES-00049,VEH-00049,CLI-0009,Finance Lease,36,1769,158,"maintenance,fuel,telematics,driver_app",24806.3,Active,2022-12-10T00:00:00,2023-02-12T00:00:00
+LES-00050,VEH-00050,CLI-0001,Finance Lease,60,1129,108,management_only,13382.45,Active,2024-02-08T00:00:00,2024-04-13T00:00:00
+LES-00051,VEH-00051,CLI-0010,Novated Lease,36,1667,105,management_only,28442.09,Renewal Review,2022-09-05T00:00:00,2022-11-10T00:00:00
+LES-00052,VEH-00052,CLI-0014,Novated Lease,36,1226,72,"maintenance,fuel,telematics,driver_app",21574.93,Active,2024-06-06T00:00:00,2024-08-12T00:00:00
+LES-00053,VEH-00053,CLI-0017,Novated Lease,60,1229,148,management_only,13427.91,Closed,2025-01-07T00:00:00,2025-03-16T00:00:00
+LES-00054,VEH-00054,CLI-0015,Novated Lease,36,1075,178,"maintenance,fuel,registration",15631.68,Closed,2024-02-16T00:00:00,2024-04-25T00:00:00
+LES-00055,VEH-00055,CLI-0009,Operating Lease,60,1010,97,"maintenance,accident,registration,billing",14888.92,Active,2023-07-27T00:00:00,2023-10-05T00:00:00
+LES-00056,VEH-00056,CLI-0014,Novated Lease,60,725,140,management_only,7181.06,Active,2023-05-08T00:00:00,2023-07-18T00:00:00
+LES-00057,VEH-00057,CLI-0008,Finance Lease,48,530,175,management_only,7047.43,Active,2023-09-20T00:00:00,2023-12-01T00:00:00
+LES-00058,VEH-00058,CLI-0018,Novated Lease,60,1108,117,"maintenance,fuel,registration",19025.95,Active,2023-12-22T00:00:00,2024-03-04T00:00:00
+LES-00059,VEH-00059,CLI-0007,Operating Lease,36,1695,94,management_only,28713.65,Active,2022-09-02T00:00:00,2022-11-15T00:00:00
+LES-00060,VEH-00060,CLI-0017,Fleet Management Only,36,594,136,"maintenance,fuel,telematics,driver_app",10033.07,Active,2023-08-03T00:00:00,2023-10-17T00:00:00
+LES-00061,VEH-00061,CLI-0018,Operating Lease,48,1131,180,"maintenance,fuel,telematics,driver_app",14803.82,Closed,2022-04-04T00:00:00,2022-06-19T00:00:00
+LES-00062,VEH-00062,CLI-0010,Finance Lease,60,1593,161,management_only,18248.67,Active,2024-06-21T00:00:00,2024-09-06T00:00:00
+LES-00063,VEH-00063,CLI-0016,Fleet Management Only,60,1197,76,"maintenance,fuel,telematics,driver_app",18514.46,Active,2022-04-20T00:00:00,2022-07-07T00:00:00
+LES-00064,VEH-00064,CLI-0014,Finance Lease,36,1210,110,management_only,19895.92,Closed,2023-04-08T00:00:00,2023-06-26T00:00:00
+LES-00065,VEH-00065,CLI-0002,Fleet Management Only,60,1191,57,"maintenance,fuel,registration",12699.67,Active,2022-07-23T00:00:00,2022-10-11T00:00:00
+LES-00066,VEH-00066,CLI-0018,Finance Lease,36,1497,117,"maintenance,fuel,telematics,driver_app",18640.9,Renewal Review,2022-01-06T00:00:00,2022-03-28T00:00:00
+LES-00067,VEH-00067,CLI-0010,Novated Lease,60,1066,119,"maintenance,fuel,registration",12103.34,Active,2023-04-24T00:00:00,2023-07-15T00:00:00
+LES-00068,VEH-00068,CLI-0005,Operating Lease,48,1003,50,"maintenance,fuel,telematics,driver_app",10468.76,Closed,2022-05-27T00:00:00,2022-08-18T00:00:00
+LES-00069,VEH-00069,CLI-0004,Novated Lease,48,1156,65,"maintenance,accident,registration,billing",12683.81,Active,2024-04-04T00:00:00,2024-06-27T00:00:00
+LES-00070,VEH-00070,CLI-0014,Fleet Management Only,60,1499,74,"maintenance,fuel,telematics,driver_app",19101.17,Closed,2023-05-28T00:00:00,2023-08-21T00:00:00
+LES-00071,VEH-00071,CLI-0006,Finance Lease,36,1484,172,"maintenance,fuel,registration",20374.67,Closed,2024-06-24T00:00:00,2024-09-18T00:00:00
+LES-00072,VEH-00072,CLI-0014,Operating Lease,36,1260,54,"maintenance,accident,registration,billing",17834.44,Active,2023-10-20T00:00:00,2024-01-15T00:00:00
+LES-00073,VEH-00073,CLI-0013,Fleet Management Only,36,856,118,"maintenance,accident,registration,billing",13227.14,Renewal Review,2024-07-20T00:00:00,2024-10-16T00:00:00
+LES-00074,VEH-00074,CLI-0018,Fleet Management Only,36,706,165,management_only,7192.37,Renewal Review,2022-04-22T00:00:00,2022-07-20T00:00:00
+LES-00075,VEH-00075,CLI-0018,Operating Lease,60,1455,179,management_only,21904.89,Active,2024-06-16T00:00:00,2024-09-14T00:00:00
+LES-00076,VEH-00076,CLI-0001,Novated Lease,36,564,136,"maintenance,accident,registration,billing",8011.51,Active,2022-07-10T00:00:00,2022-10-09T00:00:00
+LES-00077,VEH-00077,CLI-0009,Operating Lease,60,1387,123,"maintenance,fuel,registration",24149.4,Active,2024-08-25T00:00:00,2024-11-25T00:00:00
+LES-00078,VEH-00078,CLI-0003,Novated Lease,48,1486,43,"maintenance,accident,registration,billing",23658.23,Renewal Review,2023-11-28T00:00:00,2024-02-29T00:00:00
+LES-00079,VEH-00079,CLI-0005,Fleet Management Only,48,1286,132,management_only,12502.81,Closed,2024-09-18T00:00:00,2024-12-21T00:00:00
+LES-00080,VEH-00080,CLI-0008,Operating Lease,36,792,124,management_only,10897.59,Active,2024-02-24T00:00:00,2024-05-29T00:00:00
+LES-00081,VEH-00081,CLI-0005,Novated Lease,48,527,40,management_only,7265.96,Active,2022-09-16T00:00:00,2022-12-21T00:00:00
+LES-00082,VEH-00082,CLI-0005,Novated Lease,36,1026,152,"maintenance,fuel,telematics,driver_app",10974.43,Active,2022-06-03T00:00:00,2022-09-08T00:00:00
+LES-00083,VEH-00083,CLI-0016,Operating Lease,36,585,142,"maintenance,accident,registration,billing",5619.29,Closed,2022-05-21T00:00:00,2022-08-27T00:00:00
+LES-00084,VEH-00084,CLI-0004,Operating Lease,36,588,149,"maintenance,fuel,registration",7420.79,Active,2023-09-06T00:00:00,2023-12-14T00:00:00
+LES-00085,VEH-00085,CLI-0005,Operating Lease,36,1625,90,"maintenance,fuel,telematics,driver_app",18049.61,Closed,2024-04-23T00:00:00,2024-08-01T00:00:00
+LES-00086,VEH-00086,CLI-0013,Finance Lease,48,1173,117,"maintenance,accident,registration,billing",20962.99,Closed,2023-05-09T00:00:00,2023-08-18T00:00:00
+LES-00087,VEH-00087,CLI-0001,Novated Lease,48,972,140,"maintenance,fuel,registration",13618.17,Closed,2025-01-24T00:00:00,2025-05-06T00:00:00
+LES-00088,VEH-00088,CLI-0009,Fleet Management Only,36,878,144,"maintenance,fuel,telematics,driver_app",15342.42,Renewal Review,2023-02-12T00:00:00,2023-05-26T00:00:00
+LES-00089,VEH-00089,CLI-0010,Fleet Management Only,48,1594,116,"maintenance,accident,registration,billing",18648.2,Active,2024-03-21T00:00:00,2024-07-03T00:00:00
+LES-00090,VEH-00090,CLI-0008,Finance Lease,36,1621,156,"maintenance,fuel,telematics,driver_app",27099.67,Active,2023-12-23T00:00:00,2024-02-21T00:00:00
+LES-00091,VEH-00091,CLI-0015,Fleet Management Only,48,1468,49,"maintenance,accident,registration,billing",18343.79,Active,2024-01-18T00:00:00,2024-03-19T00:00:00
+LES-00092,VEH-00092,CLI-0005,Operating Lease,48,936,119,"maintenance,fuel,telematics,driver_app",9202.92,Active,2024-12-23T00:00:00,2025-02-23T00:00:00
+LES-00093,VEH-00093,CLI-0011,Fleet Management Only,60,625,103,"maintenance,fuel,registration",10539.12,Active,2022-06-04T00:00:00,2022-08-06T00:00:00
+LES-00094,VEH-00094,CLI-0013,Finance Lease,48,1723,178,"maintenance,accident,registration,billing",28989.93,Active,2025-01-03T00:00:00,2025-03-08T00:00:00
+LES-00095,VEH-00095,CLI-0008,Finance Lease,36,1140,38,"maintenance,fuel,registration",17922.98,Renewal Review,2025-02-23T00:00:00,2025-04-29T00:00:00
+LES-00096,VEH-00096,CLI-0005,Fleet Management Only,36,1016,87,"maintenance,fuel,telematics,driver_app",16235.3,Renewal Review,2023-09-16T00:00:00,2023-11-21T00:00:00
+LES-00097,VEH-00097,CLI-0012,Novated Lease,48,1474,171,"maintenance,fuel,telematics,driver_app",18037.05,Renewal Review,2022-11-13T00:00:00,2023-01-19T00:00:00
+LES-00098,VEH-00098,CLI-0012,Fleet Management Only,48,1474,60,"maintenance,accident,registration,billing",18183.77,Renewal Review,2024-06-29T00:00:00,2024-09-05T00:00:00
+LES-00099,VEH-00099,CLI-0009,Finance Lease,60,613,179,"maintenance,accident,registration,billing",5606.49,Closed,2024-07-20T00:00:00,2024-09-27T00:00:00
+LES-00100,VEH-00100,CLI-0007,Novated Lease,36,1716,141,"maintenance,accident,registration,billing",20538.44,Renewal Review,2023-03-01T00:00:00,2023-05-10T00:00:00
+LES-00101,VEH-00101,CLI-0005,Fleet Management Only,60,1686,97,"maintenance,fuel,telematics,driver_app",19078.68,Renewal Review,2023-05-29T00:00:00,2023-08-08T00:00:00
+LES-00102,VEH-00102,CLI-0008,Fleet Management Only,36,1834,160,"maintenance,fuel,telematics,driver_app",19299.9,Closed,2023-10-26T00:00:00,2024-01-06T00:00:00
+LES-00103,VEH-00103,CLI-0003,Operating Lease,60,1520,82,"maintenance,fuel,registration",25158.46,Active,2024-01-12T00:00:00,2024-03-25T00:00:00
+LES-00104,VEH-00104,CLI-0017,Fleet Management Only,36,619,36,"maintenance,accident,registration,billing",5949.65,Active,2022-03-05T00:00:00,2022-05-18T00:00:00
+LES-00105,VEH-00105,CLI-0015,Fleet Management Only,48,538,90,"maintenance,fuel,registration",7833.56,Closed,2023-10-22T00:00:00,2024-01-05T00:00:00
+LES-00106,VEH-00106,CLI-0017,Operating Lease,36,1509,159,management_only,13741.95,Closed,2024-11-01T00:00:00,2025-01-16T00:00:00
+LES-00107,VEH-00107,CLI-0008,Novated Lease,36,1082,172,management_only,17588.46,Active,2024-07-17T00:00:00,2024-10-02T00:00:00
+LES-00108,VEH-00108,CLI-0009,Finance Lease,36,739,59,"maintenance,accident,registration,billing",10773.16,Active,2022-11-09T00:00:00,2023-01-26T00:00:00
+LES-00109,VEH-00109,CLI-0012,Fleet Management Only,36,1245,103,"maintenance,fuel,telematics,driver_app",21953.93,Renewal Review,2022-05-03T00:00:00,2022-07-21T00:00:00
+LES-00110,VEH-00110,CLI-0014,Finance Lease,48,1677,97,"maintenance,fuel,registration",24959.83,Active,2023-10-02T00:00:00,2023-12-21T00:00:00
+LES-00111,VEH-00111,CLI-0004,Fleet Management Only,48,711,138,management_only,6758.08,Active,2025-02-13T00:00:00,2025-05-05T00:00:00
+LES-00112,VEH-00112,CLI-0018,Fleet Management Only,48,870,56,"maintenance,fuel,telematics,driver_app",12260.66,Active,2025-02-14T00:00:00,2025-05-07T00:00:00
+LES-00113,VEH-00113,CLI-0010,Finance Lease,36,1601,45,management_only,18315.21,Active,2023-12-20T00:00:00,2024-03-12T00:00:00
+LES-00114,VEH-00114,CLI-0001,Operating Lease,36,1094,174,"maintenance,fuel,telematics,driver_app",10000.17,Active,2023-03-17T00:00:00,2023-06-09T00:00:00
+LES-00115,VEH-00115,CLI-0011,Fleet Management Only,36,1722,71,"maintenance,fuel,telematics,driver_app",18015.65,Active,2022-06-23T00:00:00,2022-09-16T00:00:00
+LES-00116,VEH-00116,CLI-0014,Novated Lease,48,1680,134,"maintenance,accident,registration,billing",27072.33,Active,2024-06-24T00:00:00,2024-09-18T00:00:00
+LES-00117,VEH-00117,CLI-0016,Operating Lease,36,1545,123,management_only,17132.96,Active,2022-04-04T00:00:00,2022-06-30T00:00:00
+LES-00118,VEH-00118,CLI-0005,Novated Lease,36,1217,136,"maintenance,fuel,telematics,driver_app",19535.2,Renewal Review,2023-11-03T00:00:00,2024-01-30T00:00:00
+LES-00119,VEH-00119,CLI-0008,Novated Lease,60,1524,93,management_only,19639.23,Closed,2023-12-27T00:00:00,2024-03-25T00:00:00
+LES-00120,VEH-00120,CLI-0003,Novated Lease,36,1298,56,"maintenance,fuel,registration",12640.37,Active,2024-05-29T00:00:00,2024-08-27T00:00:00
+LES-00121,VEH-00121,CLI-0011,Fleet Management Only,48,1298,74,"maintenance,fuel,telematics,driver_app",12926.73,Active,2024-07-31T00:00:00,2024-10-30T00:00:00
+LES-00122,VEH-00122,CLI-0013,Novated Lease,48,1151,148,"maintenance,fuel,registration",11731.64,Active,2024-03-21T00:00:00,2024-06-21T00:00:00
+LES-00123,VEH-00123,CLI-0004,Fleet Management Only,36,1402,149,"maintenance,fuel,registration",13748.81,Closed,2023-02-02T00:00:00,2023-05-06T00:00:00
+LES-00124,VEH-00124,CLI-0007,Fleet Management Only,36,710,118,"maintenance,fuel,telematics,driver_app",9034.25,Active,2022-11-10T00:00:00,2023-02-12T00:00:00
+LES-00125,VEH-00125,CLI-0011,Finance Lease,60,1665,97,management_only,17524.98,Active,2022-11-06T00:00:00,2023-02-09T00:00:00
+LES-00126,VEH-00126,CLI-0017,Fleet Management Only,36,1136,103,"maintenance,fuel,registration",11933.53,Active,2024-08-03T00:00:00,2024-11-07T00:00:00
+LES-00127,VEH-00127,CLI-0017,Fleet Management Only,36,1382,111,"maintenance,fuel,telematics,driver_app",15568.64,Active,2025-02-09T00:00:00,2025-05-17T00:00:00
+LES-00128,VEH-00128,CLI-0005,Finance Lease,48,1800,161,"maintenance,fuel,registration",18394.93,Active,2022-07-31T00:00:00,2022-11-06T00:00:00
+LES-00129,VEH-00129,CLI-0017,Fleet Management Only,48,1330,120,management_only,15976.79,Closed,2022-11-22T00:00:00,2023-03-01T00:00:00
+LES-00130,VEH-00130,CLI-0011,Novated Lease,60,798,111,"maintenance,accident,registration,billing",10622.25,Active,2022-07-13T00:00:00,2022-10-21T00:00:00
+LES-00131,VEH-00131,CLI-0003,Novated Lease,60,1335,116,management_only,23642.67,Active,2022-10-17T00:00:00,2023-01-26T00:00:00
+LES-00132,VEH-00132,CLI-0018,Novated Lease,48,1187,131,"maintenance,fuel,telematics,driver_app",11899.66,Closed,2022-09-19T00:00:00,2022-12-30T00:00:00
+LES-00133,VEH-00133,CLI-0012,Finance Lease,60,929,174,"maintenance,fuel,registration",16329.07,Renewal Review,2023-03-15T00:00:00,2023-06-26T00:00:00
+LES-00134,VEH-00134,CLI-0004,Novated Lease,60,949,147,"maintenance,fuel,registration",15535.78,Renewal Review,2024-12-14T00:00:00,2025-03-28T00:00:00
+LES-00135,VEH-00135,CLI-0006,Novated Lease,36,1542,70,"maintenance,fuel,telematics,driver_app",23018.92,Renewal Review,2022-12-06T00:00:00,2023-02-04T00:00:00
+LES-00136,VEH-00136,CLI-0010,Fleet Management Only,60,1292,53,management_only,18398.33,Closed,2024-12-29T00:00:00,2025-02-28T00:00:00
+LES-00137,VEH-00137,CLI-0010,Operating Lease,48,1557,142,"maintenance,fuel,registration",15545.59,Active,2024-12-16T00:00:00,2025-02-16T00:00:00
+LES-00138,VEH-00138,CLI-0016,Operating Lease,60,1247,77,management_only,22073.52,Active,2025-02-09T00:00:00,2025-04-13T00:00:00
+LES-00139,VEH-00139,CLI-0015,Operating Lease,36,1401,62,"maintenance,fuel,telematics,driver_app",15408.21,Closed,2024-06-14T00:00:00,2024-08-17T00:00:00
+LES-00140,VEH-00140,CLI-0013,Fleet Management Only,48,1662,91,management_only,21884.5,Closed,2023-04-28T00:00:00,2023-07-02T00:00:00
+LES-00141,VEH-00141,CLI-0011,Novated Lease,36,1544,73,management_only,15348.82,Renewal Review,2022-03-20T00:00:00,2022-05-25T00:00:00
+LES-00142,VEH-00142,CLI-0003,Finance Lease,48,695,64,"maintenance,fuel,telematics,driver_app",8400.88,Active,2023-03-18T00:00:00,2023-05-24T00:00:00
+LES-00143,VEH-00143,CLI-0004,Novated Lease,48,1587,158,"maintenance,fuel,registration",20541.32,Renewal Review,2024-05-09T00:00:00,2024-07-16T00:00:00
+LES-00144,VEH-00144,CLI-0017,Novated Lease,36,1173,52,"maintenance,fuel,registration",10795.43,Active,2023-05-11T00:00:00,2023-07-19T00:00:00
+LES-00145,VEH-00145,CLI-0014,Finance Lease,60,1847,62,"maintenance,accident,registration,billing",25200.37,Closed,2024-12-08T00:00:00,2025-02-16T00:00:00
+LES-00146,VEH-00146,CLI-0013,Fleet Management Only,48,847,119,"maintenance,accident,registration,billing",13704.29,Active,2023-06-04T00:00:00,2023-08-14T00:00:00
+LES-00147,VEH-00147,CLI-0011,Fleet Management Only,36,901,145,"maintenance,accident,registration,billing",11754.6,Renewal Review,2023-12-23T00:00:00,2024-03-04T00:00:00
+LES-00148,VEH-00148,CLI-0005,Finance Lease,36,1316,36,"maintenance,fuel,telematics,driver_app",20754.54,Active,2022-03-17T00:00:00,2022-05-29T00:00:00
+LES-00149,VEH-00149,CLI-0013,Finance Lease,48,1702,61,"maintenance,fuel,telematics,driver_app",18336.78,Active,2023-06-03T00:00:00,2023-08-16T00:00:00
+LES-00150,VEH-00150,CLI-0004,Novated Lease,60,1057,160,management_only,15328.38,Closed,2024-06-13T00:00:00,2024-08-27T00:00:00
