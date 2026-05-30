@@ -1,12 +1,12 @@
 # Business Model Summary
 
-This summary synthesizes public information about Custom Fleet Australia and Element Fleet Management into a practical fleet-management business model for dataset design. It is not based on internal company data.
+This summary synthesizes public information about Australian fleet-management services into a practical fleet-management business model for dataset design. It is not based on internal company data.
 
 ## Company Context
 
-Custom Fleet Australia operates as a fleet leasing and fleet-management provider across Australia and New Zealand and is part of Element Fleet Management. Public materials describe Custom Fleet as supporting business, government, and institutional fleets through vehicle leasing, fleet management, driver support, supplier coordination, compliance administration, and analytics.
+Public materials describe Australian fleet-management providers as supporting business, government, and institutional fleets through vehicle leasing, fleet management, driver support, supplier coordination, compliance administration, and analytics.
 
-Element Fleet describes its broader model as end-to-end fleet lifecycle management, spanning vehicle acquisition, financing, maintenance, route optimization, risk management, electric vehicle integration, and remarketing. Its public financial commentary emphasizes both net financing revenue and service revenue, with services acting as a capital-light growth component.
+The broader model is end-to-end fleet lifecycle management, spanning vehicle acquisition, financing, maintenance, route optimization, risk management, electric vehicle integration, and remarketing. Public financial commentary for fleet managers commonly separates financing revenue from service revenue, with services acting as a capital-light growth component.
 
 ## Core Value Proposition
 
@@ -140,8 +140,5 @@ Mutable source tables should carry source control timestamps. In this dataset, `
 - Custom Fleet registration and CTP: https://www.customfleet.com.au/manage/registration-and-ctp
 - Custom Fleet driver guide: https://www.customfleet.com.au/driver-support/index.html
 - Custom Fleet EV program: https://www.customfleet.com.au/electric-vehicles/
-- Element Fleet Management home page: https://www.elementfleet.com/
-- Element 2025 financial results release: https://www.elementfleet.com/about/news/element-reports-fourth-quarter-and-record-2025-financial-results-raises-common-dividend-and-provides-full-year-2026-guidance
-- Element 2024 Annual Information Form mirror: https://financialreports.eu/filings/element-fleet-management-corp/annual-report/2025/13771491/
 
 Research date: 2026-05-26.

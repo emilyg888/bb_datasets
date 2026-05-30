@@ -1,12 +1,12 @@
-# Element Fleet Services Australia / Custom Fleet Synthetic Dataset
+# Fleet Services Australia / Custom Fleet Synthetic Dataset
 
-This folder contains synthetic datasets for an Australian fleet leasing and fleet-management operating model inspired by public information about Custom Fleet Australia and Element Fleet Management.
+This folder contains synthetic datasets for an Australian fleet leasing and fleet-management operating model inspired by public fleet-management service patterns.
 
 No row represents a real customer, driver, vehicle, vendor, claim, GPS point, invoice, or transaction. Names, IDs, amounts, dates, and operational outcomes are fabricated for analytics, prototyping, and data-model testing.
 
 ## Business Model Synthesis
 
-Custom Fleet Australia presents itself as part of Element Fleet Management and as a fleet leasing and management provider for Australia and New Zealand. The public service model is a lifecycle fleet model:
+Public fleet-management materials describe a fleet leasing and management provider model across Australia and New Zealand. The service model is a lifecycle fleet model:
 
 - Finance and leasing: operating, finance, novated, and fully maintained lease options, with bundled services and residual/disposal management.
 - Managed services: maintenance and tyres, fuel cards, registration and CTP, accident management, insurance support, roadside assistance, tolls/infringements, driver support, telematics, reporting, and client portals.
@@ -22,9 +22,6 @@ Custom Fleet Australia presents itself as part of Element Fleet Management and a
 - Custom Fleet registration and CTP: https://www.customfleet.com.au/manage/registration-and-ctp
 - Custom Fleet driver guide: https://www.customfleet.com.au/driver-support/index.html
 - Custom Fleet EV program: https://www.customfleet.com.au/electric-vehicles/
-- Element Fleet Management home page: https://www.elementfleet.com/
-- Element 2025 financial results release: https://www.elementfleet.com/about/news/element-reports-fourth-quarter-and-record-2025-financial-results-raises-common-dividend-and-provides-full-year-2026-guidance
-- Element 2024 Annual Information Form mirror: https://financialreports.eu/filings/element-fleet-management-corp/annual-report/2025/13771491/
 
 Research was performed on 2026-05-26. The dataset is synthesized from the service categories and operating logic in those sources, not copied from source data.
 
@@ -67,10 +64,12 @@ Research was performed on 2026-05-26. The dataset is synthesized from the servic
 
 ## Delta Source Files
 
-Two days of synthetic source deltas are organized by extract date:
+Four days of synthetic source deltas are organized by extract date:
 
 - `delta_sources/2026-05-25/`
 - `delta_sources/2026-05-26/`
+- `delta_sources/2026-05-27/`
+- `delta_sources/2026-05-28/`
 
 Each date folder contains update extracts for mutable source tables plus a `manifest.csv`. Delta files include the same columns as the base table, updated `effective_at` and `updated_at` values, and a `delta_action` column. Current delta actions are synthetic `UPDATE` rows only.
 
@@ -78,7 +77,7 @@ Immutable activity logs such as fuel-card transactions, telematics daily reading
 
 ## Full Source Files
 
-Two days of synthetic full source extracts are organized by extract date:
+Four days of synthetic full source extracts are organized by extract date:
 
 - `full_sources/2026-05-25/`
 - `full_sources/2026-05-26/`
@@ -93,4 +92,4 @@ Each date folder contains all 15 source tables plus a `manifest.csv`. Mutable ta
 - Test data ingestion and schema mapping across leasing, maintenance, claims, billing, and telematics domains.
 - Model end-to-end fleet lifecycle processes from vehicle order through service, driver interaction, EV charging, billing, and disposal.
 
-Do not use this dataset for benchmarking Custom Fleet, Element Fleet, suppliers, accident rates, fuel economics, or vehicle residual values. The values are realistic-looking but intentionally synthetic.
+Do not use this dataset for benchmarking Custom Fleet, suppliers, accident rates, fuel economics, or vehicle residual values. The values are realistic-looking but intentionally synthetic.

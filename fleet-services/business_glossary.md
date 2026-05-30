@@ -1,6 +1,6 @@
 # Business Glossary
 
-This glossary defines business terms used in the synthetic Element Fleet Services Australia / Custom Fleet dataset.
+This glossary defines business terms used in the synthetic Fleet Services Australia / Custom Fleet dataset.
 
 | Term | Definition |
 | --- | --- |

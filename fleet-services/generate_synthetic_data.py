@@ -443,10 +443,10 @@ for name, rows in tables.items():
     write_csv(name, rows, list(rows[0].keys()))
 
 metadata = {
-    "name": "element_fleet_services_synthetic",
+    "name": "fleet_services_synthetic",
     "domain": "fleet_management",
-    "description": "Synthetic Australian fleet-management datasets inspired by public information about Custom Fleet Australia / Element Fleet Services Australia Pty Ltd business areas.",
-    "entity": "ELEMENT FLEET SERVICES AUSTRALIA PTY LTD / Custom Fleet Australia",
+    "description": "Synthetic Australian fleet-management datasets inspired by public information about Custom Fleet Australia / Fleet Services Australia Pty Ltd business areas.",
+    "entity": "FLEET SERVICES AUSTRALIA PTY LTD / Custom Fleet Australia",
     "synthetic": True,
     "privacy": "No real customers, drivers, vehicles, vendors, invoices, claims, GPS traces, or transactions are represented.",
     "created_by": "Codex",
